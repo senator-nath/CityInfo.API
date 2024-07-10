@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CityInfo.API.Migrations
 {
     [DbContext(typeof(CityInfoDbContext))]
-    [Migration("20240708222739_InitialMigration")]
+    [Migration("20240709202515_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -46,7 +46,7 @@ namespace CityInfo.API.Migrations
                     b.ToTable("cities");
                 });
 
-            modelBuilder.Entity("CityInfo.API.Entities.PointOfInterest", b =>
+            modelBuilder.Entity("CityInfo.API.Entities.PointOfInterests", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -98,7 +98,7 @@ namespace CityInfo.API.Migrations
                     b.ToTable("PointOfInterestDto");
                 });
 
-            modelBuilder.Entity("CityInfo.API.Entities.PointOfInterest", b =>
+            modelBuilder.Entity("CityInfo.API.Entities.PointOfInterests", b =>
                 {
                     b.HasOne("CityInfo.API.Entities.City", "City")
                         .WithMany()
